@@ -1,0 +1,12 @@
+<h1>Add new Restaurant</h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <p><%= f.input :name %></p>
+  <p><%= f.input :address %></p>
+  <p><%= f.input :phone_number %></p>
+  <%# <p><%= f.input :category, collection: Restaurant::CATEGORIES.map(&:capitalize) %>
+  <p><%= f.input :category, collection: %w[chinese italian japanese french belgian] %></p>
+  <p><%= f.submit %></p>
+  <% end %>
+
+<%# <%= link_to "Back to all restaurants", restaurant_path %>
